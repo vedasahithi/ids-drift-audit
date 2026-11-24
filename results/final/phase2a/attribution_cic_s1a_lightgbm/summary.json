@@ -1,0 +1,65 @@
+{
+  "auc_threshold": 0.5204076435499999,
+  "labelfree_offset": {
+    "_d": 0.33627040847577605,
+    "main": 0.003717579340907313
+  },
+  "accuracy_overall": 0.975,
+  "accuracy_by_type": {
+    "concept": 1.0,
+    "covariate": 0.933,
+    "new_class": 0.967,
+    "prior": 1.0
+  },
+  "none_correct_heldout_null": 0.9,
+  "confusion": {
+    "concept": {
+      "concept": 30,
+      "covariate": 2,
+      "new_class": 1,
+      "prior": 0
+    },
+    "covariate": {
+      "concept": 0,
+      "covariate": 28,
+      "new_class": 0,
+      "prior": 0
+    },
+    "new_class": {
+      "concept": 0,
+      "covariate": 0,
+      "new_class": 29,
+      "prior": 0
+    },
+    "prior": {
+      "concept": 0,
+      "covariate": 0,
+      "new_class": 0,
+      "prior": 30
+    }
+  },
+  "accuracy_by_type_strength": {
+    "concept 0.25": 1.0,
+    "concept 0.5": 1.0,
+    "concept 0.75": 1.0,
+    "covariate 0.25": 1.0,
+    "covariate 0.5": 1.0,
+    "covariate 0.75": 0.8,
+    "new_class 0.25": 0.9,
+    "new_class 0.5": 1.0,
+    "new_class 0.75": 1.0,
+    "prior 0.25": 1.0,
+    "prior 0.5": 1.0,
+    "prior 0.75": 1.0
+  },
+  "minutes": 10.4,
+  "detector": {
+    "detector": "lightgbm",
+    "setting": "min_leaf_100",
+    "val_macro_f1": {
+      "defaults": 0.9997831385983763,
+      "balanced": 0.999959891711592,
+      "min_leaf_100": 1.0
+    }
+  }
+}

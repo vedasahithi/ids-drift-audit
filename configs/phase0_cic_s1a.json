@@ -1,0 +1,53 @@
+{
+  "name": "cic_s1a",
+  "csv": "../data/raw/cic_v3/f78acbaa2afe1595_NFV3DATA-A11964_A11964/data/NF-CICIDS2018-v3.csv",
+  "_comment": "S1a (main temporal): source = 14-15 Feb 2018 capture sessions (flows 0-3,804,158; benign, BruteForce, DoS GoldenEye/Slowloris); embargo 50,000 flows (plus the 12.6 h night gap); deployment = 16 Feb - 2 Mar, 325 windows. Windows 0-33 (16 Feb, DoS with SlowHTTPTest/Hulk) form the S1b DoS pair.",
+  "n_source": 3804159,
+  "window_size": 50000,
+  "gap_flows": 50000,
+  "split_mode": "interleaved",
+  "chunk_size": 20000,
+  "inner_gap": 2000,
+  "fracs": [
+    0.6,
+    0.1,
+    0.1,
+    0.2
+  ],
+  "m": 20,
+  "known_class_min_train": 100,
+  "delta": 0.05,
+  "noise_rule": {
+    "block": 1000,
+    "B": 200
+  },
+  "class_map": {
+    "FTP-BruteForce": "BruteForce",
+    "SSH-Bruteforce": "BruteForce",
+    "DoS_attacks-GoldenEye": "DoS",
+    "DoS_attacks-Slowloris": "DoS",
+    "DoS_attacks-SlowHTTPTest": "DoS",
+    "DoS_attacks-Hulk": "DoS",
+    "DDoS_attacks-LOIC-HTTP": "DDoS",
+    "DDOS_attack-LOIC-UDP": "DDoS",
+    "DDOS_attack-HOIC": "DDoS",
+    "Brute_Force_-Web": "Web",
+    "Brute_Force_-XSS": "Web",
+    "SQL_Injection": "Web",
+    "Infilteration": "Infiltration",
+    "Bot": "Bot"
+  },
+  "shortcut_policy": {
+    "_comment": "Exclude each listed host/OS fingerprint feature whose single-feature AUC on the source train block is >= 0.99; other flagged features stay and are reported; an all-features variant is reported as sensitivity.",
+    "auc_threshold": 0.99,
+    "fingerprint_features": [
+      "MIN_TTL",
+      "MAX_TTL",
+      "MIN_IP_PKT_LEN",
+      "TCP_WIN_MAX_IN",
+      "TCP_WIN_MAX_OUT"
+    ],
+    "all_features_variant": true
+  },
+  "fixed": true
+}

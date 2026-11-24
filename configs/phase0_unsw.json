@@ -1,0 +1,37 @@
+{
+  "name": "unsw",
+  "csv": "../data/raw/unsw_v3/f7546561558c07c5_NFV3DATA-A11964_A11964/data/NF-UNSW-NB15-v3.csv",
+  "_comment": "Development dataset: interleaved source blocks and the same shortcut policy as the other datasets. Source = session 1 attack period (first 190,000 flows); embargo = rest of session 1 + 26-day gap; deployment = session 2, 24 windows.",
+  "n_source": 190000,
+  "window_size": 50000,
+  "gap_flows": 945352,
+  "split_mode": "interleaved",
+  "chunk_size": 10000,
+  "inner_gap": 1000,
+  "fracs": [
+    0.6,
+    0.1,
+    0.1,
+    0.2
+  ],
+  "m": 20,
+  "known_class_min_train": 100,
+  "delta": 0.05,
+  "noise_rule": {
+    "block": 1000,
+    "B": 200
+  },
+  "shortcut_policy": {
+    "_comment": "Same policy as the other datasets: exclude each listed host/OS fingerprint feature whose single-feature AUC on the source train block is >= 0.99; other flagged features stay and are reported; an all-features variant is reported as sensitivity.",
+    "auc_threshold": 0.99,
+    "fingerprint_features": [
+      "MIN_TTL",
+      "MAX_TTL",
+      "MIN_IP_PKT_LEN",
+      "TCP_WIN_MAX_IN",
+      "TCP_WIN_MAX_OUT"
+    ],
+    "all_features_variant": true
+  },
+  "fixed": true
+}

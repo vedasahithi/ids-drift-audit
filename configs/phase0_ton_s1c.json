@@ -1,0 +1,37 @@
+{
+  "name": "ton_s1c",
+  "csv": "../data/raw/ton_v3/02934b58528a226b_NFV3DATA-A11964_A11964/data/NF-ToN-IoT-v3.csv",
+  "_comment": "S1c (new attacks): source = first capture session 23-24 Apr 2019 (flows 0-9,974,944; benign and scanning); embargo 50,000 flows (plus the 8.8 h gap); deployment = rest, 349 windows (dos, injection, ddos, password, xss, ransomware, backdoor, mitm all new). Binary F1 and false-alarm rate are the meaningful targets.",
+  "n_source": 9974945,
+  "window_size": 50000,
+  "gap_flows": 50000,
+  "split_mode": "interleaved",
+  "chunk_size": 20000,
+  "inner_gap": 2000,
+  "fracs": [
+    0.6,
+    0.1,
+    0.1,
+    0.2
+  ],
+  "m": 20,
+  "known_class_min_train": 100,
+  "delta": 0.05,
+  "noise_rule": {
+    "block": 1000,
+    "B": 200
+  },
+  "shortcut_policy": {
+    "_comment": "Exclude each listed host/OS fingerprint feature whose single-feature AUC on the source train block is >= 0.99; other flagged features stay and are reported; an all-features variant is reported as sensitivity.",
+    "auc_threshold": 0.99,
+    "fingerprint_features": [
+      "MIN_TTL",
+      "MAX_TTL",
+      "MIN_IP_PKT_LEN",
+      "TCP_WIN_MAX_IN",
+      "TCP_WIN_MAX_OUT"
+    ],
+    "all_features_variant": true
+  },
+  "fixed": true
+}

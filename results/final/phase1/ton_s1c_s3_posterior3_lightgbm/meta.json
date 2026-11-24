@@ -1,0 +1,96 @@
+{
+  "q70_duration": 1001.0,
+  "q90_in_bytes": 1143.0,
+  "concept_label": "scanning",
+  "tau": 0.6362823741828647,
+  "tau_d": 0.6362823741828647,
+  "features": [
+    "PROTOCOL",
+    "L7_PROTO",
+    "IN_BYTES",
+    "IN_PKTS",
+    "OUT_BYTES",
+    "OUT_PKTS",
+    "TCP_FLAGS",
+    "CLIENT_TCP_FLAGS",
+    "SERVER_TCP_FLAGS",
+    "FLOW_DURATION_MILLISECONDS",
+    "DURATION_IN",
+    "DURATION_OUT",
+    "MIN_TTL",
+    "MAX_TTL",
+    "LONGEST_FLOW_PKT",
+    "SHORTEST_FLOW_PKT",
+    "MIN_IP_PKT_LEN",
+    "MAX_IP_PKT_LEN",
+    "SRC_TO_DST_SECOND_BYTES",
+    "DST_TO_SRC_SECOND_BYTES",
+    "RETRANSMITTED_IN_BYTES",
+    "RETRANSMITTED_IN_PKTS",
+    "RETRANSMITTED_OUT_BYTES",
+    "RETRANSMITTED_OUT_PKTS",
+    "SRC_TO_DST_AVG_THROUGHPUT",
+    "DST_TO_SRC_AVG_THROUGHPUT",
+    "NUM_PKTS_UP_TO_128_BYTES",
+    "NUM_PKTS_128_TO_256_BYTES",
+    "NUM_PKTS_256_TO_512_BYTES",
+    "NUM_PKTS_512_TO_1024_BYTES",
+    "NUM_PKTS_1024_TO_1514_BYTES",
+    "TCP_WIN_MAX_IN",
+    "TCP_WIN_MAX_OUT",
+    "ICMP_TYPE",
+    "ICMP_IPV4_TYPE",
+    "DNS_QUERY_TYPE",
+    "DNS_TTL_ANSWER",
+    "FTP_COMMAND_RET_CODE",
+    "SRC_TO_DST_IAT_MIN",
+    "SRC_TO_DST_IAT_MAX",
+    "SRC_TO_DST_IAT_AVG",
+    "SRC_TO_DST_IAT_STDDEV",
+    "DST_TO_SRC_IAT_MIN",
+    "DST_TO_SRC_IAT_MAX",
+    "DST_TO_SRC_IAT_AVG",
+    "DST_TO_SRC_IAT_STDDEV"
+  ],
+  "excluded": [],
+  "pool_size": 63878,
+  "pool_classes": {
+    "Benign": 57182,
+    "scanning": 6696
+  },
+  "held_out": null,
+  "config": "configs/phase0_ton_s1c.json",
+  "detector": {
+    "detector": "lightgbm",
+    "setting": "min_leaf_100",
+    "val_macro_f1": {
+      "defaults": 0.6510339884009285,
+      "balanced": 0.6363376411929951,
+      "min_leaf_100": 0.6574489749826492
+    }
+  },
+  "detector_new_class": {
+    "detector": "lightgbm",
+    "setting": "min_leaf_100",
+    "val_macro_f1": {
+      "defaults": 0.6510339884009285,
+      "balanced": 0.6363376411929951,
+      "min_leaf_100": 0.6574489749826492
+    }
+  },
+  "train_classes": {
+    "Benign": 187323,
+    "scanning": 25715
+  },
+  "minutes": 21.2,
+  "windows": 10,
+  "reps": 30,
+  "budgets": [
+    50,
+    100,
+    200,
+    500,
+    1000
+  ],
+  "interval": "posterior3"
+}

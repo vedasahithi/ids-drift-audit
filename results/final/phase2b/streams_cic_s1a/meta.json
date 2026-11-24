@@ -1,0 +1,32 @@
+{
+  "tag": "cic_s1a",
+  "detector": {
+    "detector": "lightgbm",
+    "setting": "min_leaf_100",
+    "val_macro_f1": {
+      "defaults": 0.9997831385983763,
+      "balanced": 0.999959891711592,
+      "min_leaf_100": 1.0
+    }
+  },
+  "second": "hgb",
+  "windows": 325,
+  "window_size": 50000,
+  "restrict_classes": null,
+  "auc_threshold": 0.51874917305,
+  "abstention_threshold": 0.1039806,
+  "train_classes": {
+    "Benign": 782125,
+    "BruteForce": 49925,
+    "DoS": 19007
+  },
+  "reps": 10,
+  "budgets": [
+    50,
+    100,
+    200,
+    500,
+    1000
+  ],
+  "minutes": 14.3
+}

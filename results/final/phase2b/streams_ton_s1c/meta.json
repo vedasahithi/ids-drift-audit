@@ -1,0 +1,31 @@
+{
+  "tag": "ton_s1c",
+  "detector": {
+    "detector": "lightgbm",
+    "setting": "min_leaf_100",
+    "val_macro_f1": {
+      "defaults": 0.6510339884009285,
+      "balanced": 0.6363376411929951,
+      "min_leaf_100": 0.6574489749826492
+    }
+  },
+  "second": "hgb",
+  "windows": 349,
+  "window_size": 50000,
+  "restrict_classes": null,
+  "auc_threshold": 0.6462664038,
+  "abstention_threshold": 0.026542200000000002,
+  "train_classes": {
+    "Benign": 187323,
+    "scanning": 25715
+  },
+  "reps": 10,
+  "budgets": [
+    50,
+    100,
+    200,
+    500,
+    1000
+  ],
+  "minutes": 25.3
+}

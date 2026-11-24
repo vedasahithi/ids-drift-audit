@@ -1,0 +1,43 @@
+{
+  "tag": "unsw_to_ton_s1c",
+  "detector": {
+    "detector": "lightgbm",
+    "setting": "balanced",
+    "val_macro_f1": {
+      "defaults": 0.37903217000826794,
+      "balanced": 0.5369242548194972,
+      "min_leaf_100": 0.44814676406378673
+    }
+  },
+  "second": "hgb",
+  "windows": 550,
+  "window_size": 50000,
+  "restrict_classes": [
+    "backdoor",
+    "benign",
+    "dos"
+  ],
+  "auc_threshold": 0.7921413933800001,
+  "abstention_threshold": 0.19767520000000002,
+  "train_classes": {
+    "Benign": 50081,
+    "Exploits": 3047,
+    "Fuzzers": 2150,
+    "Reconnaissance": 657,
+    "DoS": 326,
+    "Generic": 290,
+    "Shellcode": 96,
+    "Analysis": 82,
+    "Backdoor": 30,
+    "Worms": 10
+  },
+  "reps": 10,
+  "budgets": [
+    50,
+    100,
+    200,
+    500,
+    1000
+  ],
+  "minutes": 10.2
+}

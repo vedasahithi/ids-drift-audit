@@ -1,0 +1,33 @@
+{
+  "tag": "cic_s1b_ddos",
+  "detector": {
+    "detector": "lightgbm",
+    "setting": "defaults",
+    "val_macro_f1": {
+      "defaults": 0.999872624294813,
+      "balanced": 0.999872624294813,
+      "min_leaf_100": 0.999872624294813
+    }
+  },
+  "second": "hgb",
+  "windows": 53,
+  "window_size": 50000,
+  "restrict_classes": null,
+  "auc_threshold": 0.53605922334,
+  "abstention_threshold": 0.1350608,
+  "train_classes": {
+    "Benign": 1548705,
+    "DDoS": 136783,
+    "BruteForce": 49925,
+    "DoS": 41783
+  },
+  "reps": 10,
+  "budgets": [
+    50,
+    100,
+    200,
+    500,
+    1000
+  ],
+  "minutes": 7.7
+}

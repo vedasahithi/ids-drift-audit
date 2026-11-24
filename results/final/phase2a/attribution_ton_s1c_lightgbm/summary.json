@@ -1,0 +1,57 @@
+{
+  "auc_threshold": 0.6393040958499999,
+  "labelfree_offset": {
+    "_d": 0.1416181946538145,
+    "main": 0.1416181946538145
+  },
+  "accuracy_overall": 0.7888888888888889,
+  "accuracy_by_type": {
+    "concept": 0.567,
+    "covariate": 0.933,
+    "prior": 0.867
+  },
+  "none_correct_heldout_null": 1.0,
+  "confusion": {
+    "concept": {
+      "concept": 17,
+      "covariate": 2,
+      "prior": 3
+    },
+    "covariate": {
+      "concept": 0,
+      "covariate": 28,
+      "prior": 1
+    },
+    "none": {
+      "concept": 13,
+      "covariate": 0,
+      "prior": 0
+    },
+    "prior": {
+      "concept": 0,
+      "covariate": 0,
+      "prior": 26
+    }
+  },
+  "accuracy_by_type_strength": {
+    "concept 0.25": 0.2,
+    "concept 0.5": 0.8,
+    "concept 0.75": 0.7,
+    "covariate 0.25": 1.0,
+    "covariate 0.5": 1.0,
+    "covariate 0.75": 0.8,
+    "prior 0.25": 0.6,
+    "prior 0.5": 1.0,
+    "prior 0.75": 1.0
+  },
+  "minutes": 22.1,
+  "detector": {
+    "detector": "lightgbm",
+    "setting": "min_leaf_100",
+    "val_macro_f1": {
+      "defaults": 0.6510339884009285,
+      "balanced": 0.6363376411929951,
+      "min_leaf_100": 0.6574489749826492
+    }
+  }
+}

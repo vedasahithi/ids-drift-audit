@@ -1,0 +1,104 @@
+{
+  "tag": "cic_s1a",
+  "summary": {
+    "alarm": {
+      "mean_macro_f1": 0.7149,
+      "labels": 1000.0,
+      "retrains": 5.0
+    },
+    "conformal": {
+      "mean_macro_f1": 0.7742,
+      "labels": 14380.0,
+      "retrains": 71.9
+    },
+    "dad": {
+      "mean_macro_f1": 0.7814,
+      "labels": 4102.6,
+      "retrains": 27.6
+    },
+    "ddm": {
+      "mean_macro_f1": 0.7508,
+      "labels": 4225.0,
+      "retrains": 8.3
+    },
+    "never": {
+      "mean_macro_f1": 0.6436,
+      "labels": 0.0,
+      "retrains": 0.0
+    },
+    "oracle": {
+      "mean_macro_f1": 0.8169,
+      "labels": 32120.0,
+      "retrains": 160.6
+    },
+    "periodic": {
+      "mean_macro_f1": 0.7756,
+      "labels": 13000.0,
+      "retrains": 65.0
+    },
+    "uncertainty": {
+      "mean_macro_f1": 0.665,
+      "labels": 4225.0,
+      "retrains": 65.0
+    }
+  },
+  "by_phase": {
+    "alarm": {
+      "known": 0.9935,
+      "new_attack": 0.5339
+    },
+    "conformal": {
+      "known": 0.9875,
+      "new_attack": 0.6355
+    },
+    "dad": {
+      "known": 0.9906,
+      "new_attack": 0.6455
+    },
+    "ddm": {
+      "known": 0.9938,
+      "new_attack": 0.5928
+    },
+    "never": {
+      "known": 0.9676,
+      "new_attack": 0.4331
+    },
+    "oracle": {
+      "known": 0.989,
+      "new_attack": 0.705
+    },
+    "periodic": {
+      "known": 0.9744,
+      "new_attack": 0.6464
+    },
+    "uncertainty": {
+      "known": 0.9766,
+      "new_attack": 0.4625
+    }
+  },
+  "reference_macro_f1": [
+    0.9960464126419076,
+    0.9960464126419076,
+    0.9960464126419076,
+    0.9960464126419076,
+    0.9960464126419076,
+    0.9960464126419076,
+    0.9960464126419076,
+    0.9960464126419076,
+    0.9960464126419076,
+    0.9960464126419076
+  ],
+  "lgbm_setting": "balanced",
+  "lgbm_val_scores": {
+    "defaults": 0.9996817300500712,
+    "balanced": 0.9999197924229365,
+    "min_leaf_100": 0.9998232468867818
+  },
+  "retrain_sample": 99999,
+  "seeds": 10,
+  "windows": 325,
+  "auc_threshold": 0.52652864518,
+  "minutes_policies": 366.8,
+  "post_retraining_windows": 320,
+  "minutes_total": 368.6
+}

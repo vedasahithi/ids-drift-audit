@@ -1,0 +1,167 @@
+{
+  "H1a": {
+    "families": {
+      "S3 concept+new_class": {
+        "n": 90,
+        "p": 8.718950083546059e-17,
+        "mean_diff": -0.12992154191015462,
+        "best_labelfree": "soft_confusion",
+        "audit_mae": 0.020101553912125803,
+        "labelfree_mae": 0.1500230958222804,
+        "p_holm": 8.718950083546059e-17
+      },
+      "S1 new-attack windows": {
+        "n": 435,
+        "p": 3.5383968774954875e-66,
+        "mean_diff": -0.2627576629462311,
+        "best_labelfree": "soft_confusion",
+        "audit_mae": 0.05929273017078358,
+        "labelfree_mae": 0.32205039311701467,
+        "p_holm": 7.076793754990975e-66
+      },
+      "S2 windows": {
+        "n": 1736,
+        "p": 5.4140223611763293e-272,
+        "mean_diff": -0.23352940980690248,
+        "best_labelfree": "soft_confusion",
+        "audit_mae": 0.019494691026245858,
+        "labelfree_mae": 0.25302410083314836,
+        "p_holm": 1.624206708352899e-271
+      }
+    },
+    "families_won": 3,
+    "met": true
+  },
+  "H1b": {
+    "families": {
+      "S3 covariate+prior": {
+        "n": 120,
+        "mean_diff": -0.026544668860470806,
+        "upper95": -0.01778019012889381,
+        "best_labelfree": "soft_confusion",
+        "passes": true
+      },
+      "S1 known-class windows": {
+        "n": 208,
+        "mean_diff": -0.12596077930007113,
+        "upper95": -0.09415431781991465,
+        "best_labelfree": "atc",
+        "passes": true
+      }
+    },
+    "met": true
+  },
+  "H2-small": {
+    "families": {
+      "S1+S2 partial-failure windows": {
+        "n": 187,
+        "p": 0.44473611526810114,
+        "mean_diff": -0.00020833209202925036,
+        "active_mae": 0.035978892016849916,
+        "random_mae": 0.03618722410887916,
+        "p_holm": 0.44473611526810114
+      },
+      "post-retraining windows": {
+        "n": 580,
+        "p": 1.1490716688944927e-05,
+        "mean_diff": -0.0016192698842282015,
+        "active_mae": 0.060332206646231366,
+        "random_mae": 0.06195147653045957,
+        "p_holm": 2.2981433377889855e-05
+      },
+      "S3 all": {
+        "n": 210,
+        "p": 1.0481402013370987e-14,
+        "mean_diff": -0.010217358312433228,
+        "active_mae": 0.03680456136772292,
+        "random_mae": 0.047021919680156156,
+        "p_holm": 3.144420604011296e-14
+      }
+    },
+    "families_won": 2,
+    "met": true
+  },
+  "H2-large": {
+    "families": {
+      "S1+S2 partial-failure windows": {
+        "n": 187,
+        "p": 0.9541554361951358,
+        "mean_diff": 0.0009010158781048844,
+        "active_mae": 0.01604563745404542,
+        "random_mae": 0.015144621575940539,
+        "p_holm": 0.9541554361951358
+      },
+      "post-retraining windows": {
+        "n": 580,
+        "p": 0.0009027800736188057,
+        "mean_diff": 0.002486850569158886,
+        "active_mae": 0.03387924762720738,
+        "random_mae": 0.0313923970580485,
+        "p_holm": 0.0018055601472376113
+      },
+      "S3 all": {
+        "n": 210,
+        "p": 8.456170975361579e-07,
+        "mean_diff": -0.0025933101386441614,
+        "active_mae": 0.013524747907050485,
+        "random_mae": 0.016118058045694644,
+        "p_holm": 2.5368512926084735e-06
+      }
+    },
+    "families_won": 2,
+    "met": true
+  },
+  "H3": {
+    "coverage_by_n": {
+      "100": 0.9661,
+      "200": 0.974,
+      "500": 0.9763,
+      "1000": 0.9783
+    },
+    "met": true
+  },
+  "H4": {
+    "overall": 0.8952380952380953,
+    "by_type": {
+      "concept": 0.783,
+      "covariate": 0.933,
+      "new_class": 0.967,
+      "prior": 0.933
+    },
+    "by_type_strength": {
+      "concept 0.25": 0.6,
+      "concept 0.5": 0.9,
+      "concept 0.75": 0.85,
+      "covariate 0.25": 1.0,
+      "covariate 0.5": 1.0,
+      "covariate 0.75": 0.8,
+      "new_class 0.25": 0.9,
+      "new_class 0.5": 1.0,
+      "new_class 0.75": 1.0,
+      "prior 0.25": 0.8,
+      "prior 0.5": 1.0,
+      "prior 0.75": 1.0
+    },
+    "met": true
+  },
+  "H5": {
+    "streams": {
+      "cic_s1a": {
+        "dad_f1": 0.7838213891793882,
+        "periodic_f1": 0.776208963527232,
+        "loss_upper95": -0.005439255036163594,
+        "label_ratio": 0.31783461538461544,
+        "passes": true
+      },
+      "ton_s1c": {
+        "dad_f1": 0.8188670728144842,
+        "periodic_f1": 0.8274117161013725,
+        "loss_upper95": 0.016528988447433456,
+        "label_ratio": 0.32717753623188406,
+        "passes": false
+      }
+    },
+    "met": false
+  },
+  "pending_inputs": []
+}

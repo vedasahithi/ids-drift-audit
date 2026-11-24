@@ -1,0 +1,71 @@
+{
+  "auc_threshold": 0.78146289215,
+  "labelfree_offset": {
+    "_d": 0.4762658224327827,
+    "main": 0.34179676866308467
+  },
+  "accuracy_overall": 0.8833333333333333,
+  "accuracy_by_type": {
+    "concept": 0.867,
+    "covariate": 0.7,
+    "new_class": 1.0,
+    "prior": 0.967
+  },
+  "none_correct_heldout_null": 0.82,
+  "confusion": {
+    "concept": {
+      "concept": 26,
+      "covariate": 0,
+      "new_class": 0,
+      "prior": 1
+    },
+    "covariate": {
+      "concept": 0,
+      "covariate": 21,
+      "new_class": 0,
+      "prior": 0
+    },
+    "new_class": {
+      "concept": 0,
+      "covariate": 0,
+      "new_class": 30,
+      "prior": 0
+    },
+    "none": {
+      "concept": 4,
+      "covariate": 9,
+      "new_class": 0,
+      "prior": 0
+    },
+    "prior": {
+      "concept": 0,
+      "covariate": 0,
+      "new_class": 0,
+      "prior": 29
+    }
+  },
+  "accuracy_by_type_strength": {
+    "concept 0.25": 0.7,
+    "concept 0.5": 0.9,
+    "concept 0.75": 1.0,
+    "covariate 0.25": 0.1,
+    "covariate 0.5": 1.0,
+    "covariate 0.75": 1.0,
+    "new_class 0.25": 1.0,
+    "new_class 0.5": 1.0,
+    "new_class 0.75": 1.0,
+    "prior 0.25": 0.9,
+    "prior 0.5": 1.0,
+    "prior 0.75": 1.0
+  },
+  "minutes": 1.8,
+  "detector": {
+    "detector": "lightgbm",
+    "setting": "balanced",
+    "val_macro_f1": {
+      "defaults": 0.37903217000826794,
+      "balanced": 0.5369242548194972,
+      "min_leaf_100": 0.44814676406378673
+    }
+  }
+}
